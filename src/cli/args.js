@@ -1,8 +1,7 @@
 const parseArgs = () => {
     const varPrefix = '--';
-    const prefixedArgs = process.argv.slice(' ');
 
-    const result = prefixedArgs.reduce((output, currentValue, currentIndex, array) => {
+    const result = process.argv.reduce((output, currentValue, currentIndex, array) => {
         if (currentValue.includes(varPrefix)) {
             const valueToPrint = `${currentValue} is ${array[currentIndex + 1]}`;
 
